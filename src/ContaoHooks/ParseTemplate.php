@@ -24,16 +24,6 @@ class ParseTemplate
     {
         if (strpos($objTemplate->getName(), 'mod_article') !== false)
         {
-            if(trim($objTemplate->containerClass) != '')
-            {
-                $strClass = trim($objTemplate->class) != '' ? trim($objTemplate->class) : '';
-                $arrClasses = explode(' ', $strClass);
-                $arrClasses[] = trim($objTemplate->containerClass);
-                $arrClasses = array_unique($arrClasses);
-                $arrClasses = array_filter($arrClasses);
-                $objTemplate->class = implode(' ',  $arrClasses);
-            }
-
             if(trim($objTemplate->backgroundClass) != '')
             {
                 $strClass = trim($objTemplate->class) != '' ? trim($objTemplate->class) : '';
