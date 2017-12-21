@@ -20,4 +20,3 @@ $GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = array('Hintergrund-Klasse
 // References
 $GLOBALS['TL_LANG']['tl_article']['container'] = 'Mittig zentriert';
 $GLOBALS['TL_LANG']['tl_article']['container-fluid'] = 'Ganze Breite';
-$GLOBALS['TL_LANG']['tl_article']['article-grey'] = 'Grauer Hintergrund';

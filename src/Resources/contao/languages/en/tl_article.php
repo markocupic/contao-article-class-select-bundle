@@ -20,4 +20,3 @@ $GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = array('Select the backgro
 // References
 $GLOBALS['TL_LANG']['tl_article']['container'] = 'Container';
 $GLOBALS['TL_LANG']['tl_article']['container-fluid'] = 'Container Fluid';
-$GLOBALS['TL_LANG']['tl_article']['article-grey'] = 'Grey background';
