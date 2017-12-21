@@ -7,11 +7,11 @@
  * @license LGPL-3.0+
  */
 
-namespace Makocupic\ContaoArticleClassSelect\ContaoHooks;
+namespace Makocupic\ContaoArticleClassSelectBundle\ContaoHooks;
 
 /**
  * Class ParseTemplate
- * @package Makocupic\ContaoArticleClassSelect\ContaoHooks
+ * @package Makocupic\ContaoArticleClassSelectBundle\ContaoHooks
  */
 class ParseTemplate
 {

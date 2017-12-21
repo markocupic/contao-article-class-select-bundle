@@ -9,6 +9,6 @@
  */
 
 
-$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('Makocupic\ContaoArticleClassSelect\ContaoHooks\ParseTemplate', 'parseTemplate');
+$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('Makocupic\\ContaoArticleClassSelectBundle\\ContaoHooks\\ParseTemplate', 'parseTemplate');
 
 
