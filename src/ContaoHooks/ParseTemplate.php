@@ -9,7 +9,7 @@
 
 namespace Markocupic\ContaoArticleClassSelectBundle\ContaoHooks;
 
-use Contao\FrontendTemplate;
+use Contao\Template;
 
 /**
  * Class ParseTemplate
@@ -19,10 +19,9 @@ class ParseTemplate
 {
 
     /**
-     * Add classes to the template object
-     * @param $objTemplate
+     * @param Template $objTemplate
      */
-    public function parseTemplate(FrontendTemplate $objTemplate)
+    public function parseTemplate(Template $objTemplate)
     {
         if (strpos($objTemplate->getName(), 'mod_article') !== false)
         {
