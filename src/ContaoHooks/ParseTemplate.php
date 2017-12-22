@@ -7,11 +7,13 @@
  * @license LGPL-3.0+
  */
 
-namespace Makocupic\ContaoArticleClassSelectBundle\ContaoHooks;
+namespace Markocupic\ContaoArticleClassSelectBundle\ContaoHooks;
+
+use Contao\FrontendTemplate;
 
 /**
  * Class ParseTemplate
- * @package Makocupic\ContaoArticleClassSelectBundle\ContaoHooks
+ * @package Markocupic\ContaoArticleClassSelectBundle\ContaoHooks
  */
 class ParseTemplate
 {
@@ -20,7 +22,7 @@ class ParseTemplate
      * Add classes to the template object
      * @param $objTemplate
      */
-    public function parseTemplate($objTemplate)
+    public function parseTemplate(FrontendTemplate $objTemplate)
     {
         if (strpos($objTemplate->getName(), 'mod_article') !== false)
         {
