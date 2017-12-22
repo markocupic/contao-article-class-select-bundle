@@ -17,14 +17,7 @@
   "autoload": {
     "psr-4": {
       "Markocupic\\ContaoArticleClassSelectBundle\\": "src/"
-    },
-    "classmap": [
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/config",
-      "src/Resources/contao/dca",
-      "src/Resources/contao/languages"
-    ]
+    }
   },
   "extra": {
     "contao-manager-plugin": "Markocupic\\ContaoArticleClassSelectBundle\\ContaoManager\\Plugin"
