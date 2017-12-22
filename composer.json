@@ -19,7 +19,6 @@
       "Markocupic\\ContaoArticleClassSelectBundle\\": "src/"
     },
     "classmap": [
-      "src/ContaoHooks"
     ],
     "exclude-from-classmap": [
       "src/Resources/contao/config",
