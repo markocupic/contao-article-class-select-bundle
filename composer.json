@@ -2,7 +2,7 @@
   "name": "markocupic/contao-article-class-select-bundle",
   "type": "contao-bundle",
   "description": "Contao 4 Article Class Select Bundle",
-  "license": "LGPL-3.0+",
+  "license": "MIT",
   "authors": [
     {
       "name": "Marko Cupic",
