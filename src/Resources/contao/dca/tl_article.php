@@ -32,10 +32,8 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass'] = array(
     'filter'    => true,
     'default'   => 'main',
     'inputType' => 'select',
-    'options'   => array('article-gray', 'article-white', 'article-dark', 'article-steelblue', 'article-darkcyan'),
+    'options'   => array('article-gray', 'article-white', 'article-dark', 'article-blue', 'article-darkcyan'),
     'eval'      => array('tl_class' => 'w50', 'includeBlankOption' => true),
     'reference' => &$GLOBALS['TL_LANG']['tl_article'],
     'sql'       => "varchar(32) NOT NULL default ''"
 );
-
-
