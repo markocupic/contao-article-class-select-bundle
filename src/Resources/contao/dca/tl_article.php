@@ -4,7 +4,7 @@
  * @author     Marko Cupic
  * @package    Contao Article Class Select Bundle
  * @license    LGPL-3.0+
- * @see	       https://github.com/markocupic/contao-article-class-select-bundle
+ * @see           https://github.com/markocupic/contao-article-class-select-bundle
  *
  */
 
@@ -23,7 +23,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['containerClass'] = array(
     'options'   => array('container', 'container-fluid'),
     'eval'      => array('tl_class' => 'w50', 'includeBlankOption' => true),
     'reference' => &$GLOBALS['TL_LANG']['tl_article'],
-    'sql'       => "varchar(32) NOT NULL default ''"
+    'sql'       => "varchar(32) NOT NULL default ''",
 );
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass'] = array(
@@ -32,8 +32,8 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass'] = array(
     'filter'    => true,
     'default'   => 'main',
     'inputType' => 'select',
-    'options'   => array('article-gray', 'article-white', 'article-dark', 'article-blue', 'article-darkcyan'),
+    'options'   => array('article-boxed-white', 'article-gray', 'article-white', 'article-dark', 'article-blue', 'article-darkcyan'),
     'eval'      => array('tl_class' => 'w50', 'includeBlankOption' => true),
     'reference' => &$GLOBALS['TL_LANG']['tl_article'],
-    'sql'       => "varchar(32) NOT NULL default ''"
+    'sql'       => "varchar(32) NOT NULL default ''",
 );
