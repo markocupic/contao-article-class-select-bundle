@@ -9,9 +9,11 @@
  */
 
 
-// Palettes
-$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace('{teaser_legend', '{article_class_select_legend},containerClass,backgroundClass;{teaser_legend', $GLOBALS['TL_DCA']['tl_article']['palettes']['default']);
-
+// Extend the default palettes
+Contao\CoreBundle\DataContainer\PaletteManipulator::create()
+    ->addLegend('article_class_select_legend', 'teaser_legend', Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER)
+    ->addField(array('containerClass', 'backgroundClass'), 'article_class_select_legend', Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('default', 'tl_article');
 
 // Fields
 $GLOBALS['TL_DCA']['tl_article']['fields']['containerClass'] = array(
@@ -20,7 +22,7 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['containerClass'] = array(
     'filter'    => true,
     'default'   => 'main',
     'inputType' => 'select',
-    'options'   => array('container', 'container-fluid'),
+    'options'   => array('container', 'container-fluid', 'container-fluid p-0 m-0'),
     'eval'      => array('tl_class' => 'w50', 'includeBlankOption' => true),
     'reference' => &$GLOBALS['TL_LANG']['tl_article'],
     'sql'       => "varchar(32) NOT NULL default ''",

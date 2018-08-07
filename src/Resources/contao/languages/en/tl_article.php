@@ -18,5 +18,7 @@ $GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = array('Select the backgro
 
 
 // References
-$GLOBALS['TL_LANG']['tl_article']['container'] = 'Container';
-$GLOBALS['TL_LANG']['tl_article']['container-fluid'] = 'Container Fluid';
+$GLOBALS['TL_LANG']['tl_article']['container'] = 'container';
+$GLOBALS['TL_LANG']['tl_article']['container-fluid'] = 'container fluid';
+$GLOBALS['TL_LANG']['tl_article']['container-fluid p-0 m-0'] = 'container fluid without padding and margin';
+
