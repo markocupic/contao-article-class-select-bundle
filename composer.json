@@ -1,6 +1,6 @@
 {
   "name": "markocupic/contao-article-class-select-bundle",
-  "type": "contao-bundle",
+  "type": "contao-module",
   "description": "Contao 4 Article Class Select Bundle",
   "license": "MIT",
   "authors": [
@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "contao/core-bundle": "^4.4"
+    "contao/core-bundle": ">=4.4"
   },
   "autoload": {
     "psr-4": {
