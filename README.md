@@ -1,4 +1,4 @@
-#Contao Article Class Select Bundle
+# Contao Article Class Select Bundle
 With this extension for contao 4 you can add two more classes in the article settings of the contao backend.
 
 ### Layout (bootstrap)
