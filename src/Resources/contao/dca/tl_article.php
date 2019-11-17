@@ -8,7 +8,6 @@
  *
  */
 
-
 // Extend the default palettes
 Contao\CoreBundle\DataContainer\PaletteManipulator::create()
     ->addLegend('article_class_select_legend', 'teaser_legend', Contao\CoreBundle\DataContainer\PaletteManipulator::POSITION_AFTER)
@@ -34,8 +33,8 @@ $GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass'] = array(
     'filter'    => true,
     'default'   => 'main',
     'inputType' => 'select',
-    'options'   => array('article-boxed-white', 'article-boxed-blue', 'article-gray', 'article-dark-gray', 'article-white', 'article-dark', 'article-blue', 'article-darkcyan'),
-    'eval'      => array('tl_class' => 'w50', 'includeBlankOption' => true),
+    'options'   => array('article-boxed-white', 'article-boxed-blue', 'article-gray', 'article-darkgray', 'article-white', 'article-dark', 'article-blue', 'article-darkcyan', 'gradient-blue', 'gradient-dark', 'gradient-gray', 'gradient-darkgray', 'gradient-darkcyan'),
+    'eval'      => array('tl_class' => 'w50', 'multiple' => true, 'chosen' => true, 'includeBlankOption' => true),
     'reference' => &$GLOBALS['TL_LANG']['tl_article'],
-    'sql'       => "varchar(32) NOT NULL default ''",
+    'sql'        => "blob NULL",
 );

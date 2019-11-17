@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Markocupic\ContaoArticleClassSelectBundle\ContaoHooks;
 
+use Contao\StringUtil;
 use Contao\Template;
 
 /**
@@ -28,15 +29,16 @@ class ParseTemplate
     {
         if (strpos($objTemplate->getName(), 'mod_article') !== false)
         {
-            if (trim($objTemplate->backgroundClass) != '')
-            {
-                $strClass = trim($objTemplate->class) != '' ? trim($objTemplate->class) : '';
-                $arrClasses = explode(' ', $strClass);
-                $arrClasses[] = trim($objTemplate->backgroundClass);
-                $arrClasses = array_unique($arrClasses);
-                $arrClasses = array_filter($arrClasses);
-                $objTemplate->class = implode(' ', $arrClasses);
-            }
+            $objTemplate->backgroundClass = trim($objTemplate->backgroundClass);
+            $arrBackgroundClasses = StringUtil::deserialize($objTemplate->backgroundClass, true);
+            $strBackgroundClasses = implode(' ', $arrBackgroundClasses);
+
+            $strClass = trim($objTemplate->class) != '' ? trim($objTemplate->class) : '';
+            $arrClasses = explode(' ', $strClass);
+            $arrClasses[] = $strBackgroundClasses;
+            $arrClasses = array_unique($arrClasses);
+            $arrClasses = array_filter($arrClasses);
+            $objTemplate->class = implode(' ', $arrClasses);
         }
     }
 }

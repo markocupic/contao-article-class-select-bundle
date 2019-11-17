@@ -14,7 +14,7 @@ $GLOBALS['TL_LANG']['tl_article']['article_class_select_legend'] = 'Article Layo
 
 // Fields
 $GLOBALS['TL_LANG']['tl_article']['containerClass'] = array('Container-Klasse','Bitte w&auml;hlen Sie die Container-Klasse aus.');
-$GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = array('Hintergrund-Klasse','Bitte w&auml;hlen Sie die Hintergrund-Klasse aus.');
+$GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = array('Hintergrund-Klasse','Bitte w&auml;hlen Sie die Hintergrund-Klassen aus.');
 
 
 // References
