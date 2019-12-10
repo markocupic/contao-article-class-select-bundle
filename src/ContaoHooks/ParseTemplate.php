@@ -29,7 +29,7 @@ class ParseTemplate
     {
         if (strpos($objTemplate->getName(), 'mod_article') !== false)
         {
-            $objTemplate->backgroundClass = trim($objTemplate->backgroundClass);
+            $objTemplate->backgroundClass = $objTemplate->backgroundClass != '' ? trim($objTemplate->backgroundClass) : '';
             $arrBackgroundClasses = StringUtil::deserialize($objTemplate->backgroundClass, true);
             $strBackgroundClasses = implode(' ', $arrBackgroundClasses);
 
