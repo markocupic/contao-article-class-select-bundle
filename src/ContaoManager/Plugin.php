@@ -1,23 +1,25 @@
 <?php
-/**
- * @copyright  Marko Cupic 2017 <m.cupic@gmx.ch>
- * @author     Marko Cupic
- * @package    Contao Article Class Select Bundle
- * @license    LGPL-3.0+
- * @see	       https://github.com/markocupic/contao-article-class-select-bundle
+
+declare(strict_types=1);
+
+/*
+ * This file is part of Contao Article Class Selct Bundle.
  *
+ * (c) Marko Cupic 2022 <m.cupic@gmx.ch>
+ * @license MIT
+ * For the full copyright and license information,
+ * please view the LICENSE file that was distributed with this source code.
+ * @link https://github.com/markocupic/contao-article-class-select-bundle
  */
+
 namespace Markocupic\ContaoArticleClassSelectBundle\ContaoManager;
 
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
+use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Markocupic\ContaoArticleClassSelectBundle\MarkocupicContaoArticleClassSelectBundle;
 
-/**
- * Plugin for the Contao Manager.
- *
- * @author Marko Cupic
- */
 class Plugin implements BundlePluginInterface
 {
     /**
@@ -26,10 +28,10 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('Markocupic\ContaoArticleClassSelectBundle\MarkocupicContaoArticleClassSelectBundle')
+            BundleConfig::create(MarkocupicContaoArticleClassSelectBundle::class)
                 ->setLoadAfter([
-                  'Contao\CoreBundle\ContaoCoreBundle',
-                ])
+                    ContaoCoreBundle::class,
+                ]),
         ];
     }
 }
