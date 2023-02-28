@@ -44,7 +44,7 @@ class MarkocupicContaoArticleClassSelectExtension extends Extension
         $container->setParameter($rootKey.'.background_class', $config['background_class']);
     }
 
-    public function getAlias()
+    public function getAlias(): string
     {
         return Configuration::ROOT_KEY;
     }
