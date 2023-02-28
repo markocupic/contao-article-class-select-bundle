@@ -1,0 +1,12 @@
+{
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "contao/test-case": "^5.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true
+        }
+    }
+}

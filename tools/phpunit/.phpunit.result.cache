@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Markocupic\\ContaoArticleClassSelectBundle\\Tests\\ContaoManager\\PluginTest::testGetBundles":3},"times":{"Markocupic\\ContaoArticleClassSelectBundle\\Tests\\ContaoManager\\PluginTest::testInstantiation":0.004,"Markocupic\\ContaoArticleClassSelectBundle\\Tests\\ContaoManager\\PluginTest::testGetBundles":0.001}}
