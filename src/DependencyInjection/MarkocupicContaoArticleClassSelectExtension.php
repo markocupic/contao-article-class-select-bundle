@@ -38,9 +38,14 @@ class MarkocupicContaoArticleClassSelectExtension extends Extension
         $loader->load('services.yaml');
 
         // Friendly configuration
-        $rootKey = Configuration::ROOT_KEY;
+        $rootKey = $this->getAlias();
 
         $container->setParameter($rootKey.'.container_class', $config['container_class']);
         $container->setParameter($rootKey.'.background_class', $config['background_class']);
+    }
+
+    public function getAlias()
+    {
+        return Configuration::ROOT_KEY;
     }
 }

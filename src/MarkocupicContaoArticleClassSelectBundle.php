@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace Markocupic\ContaoArticleClassSelectBundle;
 
+use Markocupic\ContaoArticleClassSelectBundle\DependencyInjection\MarkocupicContaoArticleClassSelectExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class MarkocupicContaoArticleClassSelectBundle extends Bundle
@@ -21,5 +22,10 @@ class MarkocupicContaoArticleClassSelectBundle extends Bundle
     public function getPath(): string
     {
         return \dirname(__DIR__);
+    }
+
+    public function getContainerExtension(): MarkocupicContaoArticleClassSelectExtension
+    {
+        return new MarkocupicContaoArticleClassSelectExtension();
     }
 }

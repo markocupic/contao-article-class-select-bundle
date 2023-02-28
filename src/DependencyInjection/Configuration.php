@@ -19,7 +19,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
-    public const ROOT_KEY = 'markocupic_article_class_select_bundle';
+    public const ROOT_KEY = 'markocupic_article_class_select';
 
     public function getConfigTreeBuilder(): TreeBuilder
     {
