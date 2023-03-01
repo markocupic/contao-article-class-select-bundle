@@ -43,19 +43,15 @@ markocupic_article_class_select:
 
 // Inside your contao/dca/article.php you write:
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['containerClass'] = [
-    'options' => [
-        'container-sm',
-        'container-lg',
-        'container-fluid',
-    ],
+$GLOBALS['TL_DCA']['tl_article']['fields']['containerClass']['options'] = [
+    'container-sm',
+    'container-lg',
+    'container-fluid',
 ];
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass'] = [
-    'options' => [
-        'white-background',
-        'gray-background',
-        'dark-background',
-    ],
+$GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass']['options'] = [
+    'white-background',
+    'gray-background',
+    'dark-background',
 ];
 ```
