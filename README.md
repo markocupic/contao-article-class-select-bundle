@@ -41,7 +41,7 @@ markocupic_article_class_select:
 ```
 <?php
 
-// Inside your contao/dca/article.php you write:
+// Inside your contao/dca/tl_article.php you write:
 
 $GLOBALS['TL_DCA']['tl_article']['fields']['containerClass']['options'] = [
     'container-sm',
