@@ -22,5 +22,7 @@ $GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = ['Hintergrund-Klasse', 'B
 // References
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container'] = 'Mittig zentriert [container]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container p-0'] = 'Mittig zentriert ohne padding [container p-0]';
+$GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container mt-0 mb-0'] = 'Mittig zentriert ohne vertikalen Aussenabstand [container mt-0 mb-0]';
+$GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container p-0 mt-0 mb-0'] = 'Mittig zentriert ohne vertikalen Aussenabstand und ohne Innenabstand [container p-0 mt-0 mb-0]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container-fluid'] = 'Ganze Breite [container-fluid]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container-fluid p-0 m-0'] = 'Ganze Breite ohne padding und margin [container-fluid p-0 m-0]';
