@@ -33,8 +33,6 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue([
                         'container',
                         'container p-0',
-                        'container mt-0 mb-0',
-                        'container p-0 mt-0 mb-0',
                         'container-fluid',
                         'container-fluid p-0 m-0',
                     ])
@@ -43,13 +41,19 @@ class Configuration implements ConfigurationInterface
                     ->info('Allows to configure the background class in the mod_article template.')
                     ->prototype('scalar')->end()
                     ->defaultValue([
+                        'article-boxed-transparent',
                         'article-boxed-white',
                         'article-boxed-blue',
+                        'article-boxed-gray',
+                        'article-boxed-darkgray',
+                        'article-boxed-dark',
+                        'article-boxed-darkcyan',
+                        'article-transparent',
+                        'article-white',
+                        'article-blue',
                         'article-gray',
                         'article-darkgray',
-                        'article-white',
                         'article-dark',
-                        'article-blue',
                         'article-darkcyan',
                         'dark-mode',
                         'gradient-blue',
