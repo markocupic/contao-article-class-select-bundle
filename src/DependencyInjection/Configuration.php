@@ -48,6 +48,7 @@ class Configuration implements ConfigurationInterface
                         'article-boxed-darkgray',
                         'article-boxed-dark',
                         'article-boxed-darkcyan',
+                        'article-boxed-red',
                         'article-transparent',
                         'article-white',
                         'article-blue',
@@ -55,12 +56,14 @@ class Configuration implements ConfigurationInterface
                         'article-darkgray',
                         'article-dark',
                         'article-darkcyan',
+                        'article-red',
                         'dark-mode',
                         'gradient-blue',
                         'gradient-dark',
                         'gradient-gray',
                         'gradient-darkgray',
                         'gradient-darkcyan',
+                        'gradient-red',
                     ])
                 ->end()
             ->end()
