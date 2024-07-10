@@ -33,6 +33,8 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue([
                         'container',
                         'container p-0',
+                        'container px-0',
+                        'container py-0',
                         'container-fluid',
                         'container-fluid p-0 m-0',
                     ])

@@ -22,6 +22,8 @@ $GLOBALS['TL_LANG']['tl_article']['backgroundClass'] = ['background class', 'Sel
 // References
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container'] = 'container [container]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container p-0'] = 'container without padding [container p-0]';
+$GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container px-0'] = 'container without horizontal padding [container px-0]';
+$GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container py-0'] = 'container without vertical padding [container py-0]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container mt-0 mb-0'] = 'container without vertical margin [container mt-0 mb-0]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container p-0 mt-0 mb-0'] = 'container without padding and vertical margin [container p-0 mt-0 mb-0]';
 $GLOBALS['TL_LANG']['tl_article']['container_class_ref']['container-fluid'] = 'container fluid';

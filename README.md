@@ -26,14 +26,17 @@ To replace the preconfigured classes with your own classes, you have two options
 
 markocupic_article_class_select:
   container_class:
-    - container-sm
-    - container-lg
-    - container-fluid
+    - 'container'
+    - 'container p-0'
+    - 'container px-0'
+    - 'container py-0'
+    - 'container-fluid'
+    - 'container-fluid p-0 m-0'
 
   background_class:
-    - white-background
-    - gray-background
-    - my-dark-background
+    - 'white-background'
+    - 'gray-background'
+    - 'my-dark-background'
 ```
 
 *In a more classic way:*
