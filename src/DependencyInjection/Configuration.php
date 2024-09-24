@@ -68,6 +68,72 @@ class Configuration implements ConfigurationInterface
                         'gradient-red',
                     ])
                 ->end()
+                ->arrayNode('margin_mobile_class')
+                    ->info('Allows to configure the margin class for mobile screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'mob_mabo_none',
+                        'mob_mabo_s',
+                        'mob_mabo_m',
+                        'mob_mabo_l',
+                        'mob_mabo_xl',
+                    ])
+                ->end()
+                ->arrayNode('margin_tablet_class')
+                    ->info('Allows to configure the margin class for tablet screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'tab_mabo_none',
+                        'tab_mabo_s',
+                        'tab_mabo_m',
+                        'tab_mabo_l',
+                        'tab_mabo_xl',
+                    ])
+                ->end()
+                ->arrayNode('margin_desktop_class')
+                    ->info('Allows to configure the margin class for desktop screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'desk_mabo_none',
+                        'desk_mabo_s',
+                        'desk_mabo_m',
+                        'desk_mabo_l',
+                        'desk_mabo_xl',
+                    ])
+                ->end()
+                ->arrayNode('padding_mobile_class')
+                    ->info('Allows to configure the padding class for mobile screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'mob_pad_none',
+                        'mob_pad_s',
+                        'mob_pad_m',
+                        'mob_pad_l',
+                        'mob_pad_xl',
+                    ])
+                ->end()
+                ->arrayNode('padding_tablet_class')
+                    ->info('Allows to configure the padding class for tablet screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'tab_pad_none',
+                        'tab_pad_s',
+                        'tab_pad_m',
+                        'tab_pad_l',
+                        'tab_pad_xl',
+                    ])
+                ->end()
+                ->arrayNode('padding_desktop_class')
+                    ->info('Allows to configure the padding class for desktop screens in the mod_article template.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([
+                        'desk_pad_none',
+                        'desk_pad_s',
+                        'desk_pad_m',
+                        'desk_pad_l',
+                        'desk_pad_xl',
+                    ])
+                ->end()
             ->end()
         ;
 

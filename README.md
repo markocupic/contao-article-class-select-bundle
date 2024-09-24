@@ -21,40 +21,41 @@ To replace the preconfigured classes with your own classes, you have two options
 
 *The modern way:*
 
-```
+```yaml
 # Inside your config/config.yaml you write:
 
 markocupic_article_class_select:
-  container_class:
-    - 'container'
-    - 'container p-0'
-    - 'container px-0'
-    - 'container py-0'
-    - 'container-fluid'
-    - 'container-fluid p-0 m-0'
+    container_class:
+        - 'container'
+        - 'container p-0'
+        - 'container px-0'
+        - 'container py-0'
+        - 'container-fluid'
+        - 'container-fluid p-0 m-0'
 
-  background_class:
-    - 'white-background'
-    - 'gray-background'
-    - 'my-dark-background'
-```
+    background_class:
+        - 'white-background'
+        - 'gray-background'
+        - 'my-dark-background'
 
-*In a more classic way:*
+    # margins
+    margin_mobile_class:
+        - 'my-xs-4'
 
-```
-<?php
+    margin_tablet_class:
+        - 'my-md-5'
 
-// Inside your contao/dca/tl_article.php you write:
+    margin_desktop_class:
+        - 'my-lg-5'
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['containerClass']['options'] = [
-    'container-sm',
-    'container-lg',
-    'container-fluid',
-];
+    # paddings
+    padding_mobile_class:
+        - 'p-xs-4'
 
-$GLOBALS['TL_DCA']['tl_article']['fields']['backgroundClass']['options'] = [
-    'white-background',
-    'gray-background',
-    'dark-background',
-];
+    padding_tablet_class:
+        - 'p-md-5'
+
+    padding_desktop_class:
+        - 'p-lg-5'
+    -
 ```

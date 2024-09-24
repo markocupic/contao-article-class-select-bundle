@@ -42,6 +42,12 @@ class MarkocupicContaoArticleClassSelectExtension extends Extension
 
         $container->setParameter($rootKey.'.container_class', $config['container_class']);
         $container->setParameter($rootKey.'.background_class', $config['background_class']);
+        $container->setParameter($rootKey.'.margin_mobile_class', $config['margin_mobile_class']);
+        $container->setParameter($rootKey.'.margin_tablet_class', $config['margin_tablet_class']);
+        $container->setParameter($rootKey.'.margin_desktop_class', $config['margin_desktop_class']);
+        $container->setParameter($rootKey.'.padding_mobile_class', $config['padding_mobile_class']);
+        $container->setParameter($rootKey.'.padding_tablet_class', $config['padding_tablet_class']);
+        $container->setParameter($rootKey.'.padding_desktop_class', $config['padding_desktop_class']);
     }
 
     public function getAlias(): string

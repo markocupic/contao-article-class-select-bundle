@@ -1,7 +1,7 @@
 {
     "name": "markocupic/contao-article-class-select-bundle",
     "type": "contao-module",
-    "description": "Contao 4 Article Class Select Bundle",
+    "description": "Contao Article Class Select Bundle",
     "license": "MIT",
     "authors": [
         {
