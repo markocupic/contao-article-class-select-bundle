@@ -1,7 +1,7 @@
 {
     "name": "markocupic/contao-article-class-select-bundle",
-    "type": "contao-module",
-    "description": "Contao 4 Article Class Select Bundle",
+    "type": "contao-bundle",
+    "description": "Contao Article Class Select Bundle: select a container class and background classes for articles (Contao 5.3 and Contao 6)",
     "license": "MIT",
     "authors": [
         {
@@ -12,15 +12,27 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "contao/core-bundle": "^4.13 || ^5.0"
+        "php": "^8.1",
+        "contao/core-bundle": "^5.3 || ^6.0",
+        "symfony/config": "^6.4 || ^7.0 || ^8.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0 || ^8.0",
+        "symfony/http-kernel": "^6.4 || ^7.0 || ^8.0"
     },
     "require-dev": {
-        "contao/manager-plugin": "^2.3.1"
+        "contao/manager-plugin": "^2.0",
+        "contao/test-case": "^5.3 || ^6.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
     },
     "autoload": {
         "psr-4": {
             "Markocupic\\ContaoArticleClassSelectBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Markocupic\\ContaoArticleClassSelectBundle\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -30,11 +42,23 @@
         "allow-plugins": {
             "contao/manager-plugin": false,
             "contao-components/installer": false,
-            "contao-community-alliance/composer-plugin": true
+            "php-http/discovery": false,
+            "contao-community-alliance/composer-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "policy": {
+            "advisories": {
+                "ignore-id": [
+                    "PKSA-8j6w-3kr7-s9xk",
+                    "PKSA-6j95-1jtb-x6wc",
+                    "PKSA-cbx2-m9db-bmzd"
+                ]
+            }
         }
     },
     "scripts": {
-        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check config/ contao/ src/ tests/ --config tools/ecs/config.php --fix --ansi",
-        "unit-tests": "@php tools/phpunit/vendor/bin/phpunit -c tools/phpunit/phpunit.xml.dist"
+        "cs-fixer": "@php tools/ecs/vendor/bin/ecs check --config tools/ecs/config.php --fix --ansi",
+        "cs-check": "@php tools/ecs/vendor/bin/ecs check --config tools/ecs/config.php --ansi",
+        "unit-tests": "@php vendor/bin/phpunit --colors=always"
     }
 }

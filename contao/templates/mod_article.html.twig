@@ -1,0 +1,73 @@
+{#
+    Replaces the core mod_article template (Contao 5.3: mod_article.html5,
+    Contao 6: mod_article.html.twig) and wraps the article content in an
+    additional div with the selected container class.
+
+    The background classes are added to "class" by the ParseTemplateListener.
+#}
+{% set wrapperAttributes = attrs(cssID|default)
+    .addClass([class|default, 'block'])
+    .addStyle(style|default)
+    .mergeWith(wrapperAttributes|default)
+%}
+
+{% if teaserOnly|default %}
+
+    {% block alias %}
+        <article{{ wrapperAttributes }}>
+            <div class="ce_text content-text block">
+                <h2>{{ headline }}</h2>
+                <div class="teaser">
+                    {{ teaser|default|sanitize_html('contao')|csp_inline_styles }}
+                    <p class="more"><a href="{{ href }}" title="{{ readMore }}">{{ more }} <span class="invisible">{{ headline }}</span></a></p>
+                </div>
+            </div>
+        </article>
+    {% endblock %}
+
+{% elseif noMarkup|default %}
+
+    {% block content %}
+        {{ elements|default([])|join|raw }}
+    {% endblock %}
+
+{% else %}
+
+    <div{{ wrapperAttributes }}>
+        {# Add an additional div to maintain the container layout #}
+        {% set insideAttributes = attrs()
+            .addClass(['article-inside', containerClass|default ?: 'container'])
+            .mergeWith(insideAttributes|default)
+        %}
+        <div{{ insideAttributes }}>
+            {% if printable|default %}
+                {% block syndication %}
+                    <!-- indexer::stop -->
+                    <div class="syndication">
+                        {% if printButton|default %}
+                            <a href="{{ print }}" class="print" title="{{ printTitle }}" onclick="window.print();return false" data-skip-search-index>{{ backend_icon('assets/contao/images/print.svg') }}</a>
+                        {% endif %}
+                        {% if facebookButton|default %}
+                            <a href="{{ path('contao_frontend_share', {p: 'facebook', u: encUrl}) }}" class="facebook" rel="nofollow" title="{{ facebookTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false">{{ backend_icon('assets/contao/images/facebook.svg') }}</a>
+                        {% endif %}
+                        {% if twitterButton|default %}
+                            <a href="{{ path('contao_frontend_share', {p: 'twitter', u: encUrl, t: encTitle}) }}" class="twitter" rel="nofollow" title="{{ twitterTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false">{{ backend_icon('assets/contao/images/twitter.svg') }}</a>
+                        {% endif %}
+                    </div>
+                    <!-- indexer::continue -->
+                {% endblock %}
+            {% endif %}
+
+            {{ block('content') }}
+
+            {% if backlink|default %}
+                {% block backlink %}
+                    <!-- indexer::stop -->
+                    <p class="back"><a href="{{ backlink }}" title="{{ back }}">{{ back }}</a></p>
+                    <!-- indexer::continue -->
+                {% endblock %}
+            {% endif %}
+        </div>
+    </div>
+
+{% endif %}
