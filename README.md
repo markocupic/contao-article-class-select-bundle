@@ -2,9 +2,9 @@
 
 # Contao Article Class Select Bundle
 
-With this extension for Contao 4 you can inject two more classes in the article settings of the contao backend.
+With this extension for Contao 5.3 and Contao 6 you can inject two more classes in the article settings of the contao backend.
 
-The extension comes with a customized article template,
+The extension comes with a customized article template (`mod_article.html.twig`),
 in which an additional DIV element has been built in to use the Bootstrap container classes.
 
 ## Inject a **container-** and a **background** CSS class

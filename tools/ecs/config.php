@@ -2,40 +2,31 @@
 
 declare(strict_types=1);
 
-use Symplify\EasyCodingStandard\Config\ECSConfig;
-use Symplify\EasyCodingStandard\ValueObject\Option;
+use Contao\EasyCodingStandard\Set\SetList;
 use PhpCsFixer\Fixer\Comment\HeaderCommentFixer;
 use PhpCsFixer\Fixer\Whitespace\MethodChainingIndentationFixer;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ECSConfig $ecsConfig): void {
-
-    if (is_file(__DIR__.'/vendor/contao/easy-coding-standard/config/contao.php')) {
-        //.github/workflows/ci.yaml
-        $ecsConfig->sets([__DIR__.'/vendor/contao/easy-coding-standard/config/contao.php']);
-    } else {
-        // local development
-        $ecsConfig->sets([__DIR__.'/../../../../../vendor/contao/easy-coding-standard/config/contao.php']);
-    }
-
-    $services = $ecsConfig->services();
-    $services
-        ->set(HeaderCommentFixer::class)
-        ->call('configure', [
-            [
-                'header' => "This file is part of Contao Article Class Select Bundle.\n\n(c) Marko Cupic ".date("Y")." <m.cupic@gmx.ch>\n@license MIT\nFor the full copyright and license information,\nplease view the LICENSE file that was distributed with this source code.\n@link https://github.com/markocupic/contao-article-class-select-bundle",
-            ],
-        ]);
-
-    $ecsConfig->skip([
-        '*/contao/dca*',
+return ECSConfig::configure()
+    ->withSets([SetList::CONTAO])
+    ->withPaths([
+        __DIR__.'/../../config',
+        __DIR__.'/../../contao',
+        __DIR__.'/../../src',
+        __DIR__.'/../../tests',
+    ])
+    ->withSkip([
+        '*/contao/dca/*',
+        \Contao\EasyCodingStandard\Fixer\CommentLengthFixer::class => ['*.php'],
         MethodChainingIndentationFixer::class => [
-            'DependencyInjection/Configuration.php',
+            '*/DependencyInjection/Configuration.php',
         ],
-    ]);
-
-    $ecsConfig->parallel();
-    $ecsConfig->lineEnding("\n");
-
-    $parameters = $ecsConfig->parameters();
-    $parameters->set(Option::CACHE_DIRECTORY, sys_get_temp_dir().'/ecs_default_cache');
-};
+    ])
+    ->withParallel()
+    ->withSpacing(Option::INDENTATION_SPACES, "\n")
+    ->withConfiguredRule(HeaderCommentFixer::class, [
+        'header' => "This file is part of Contao Article Class Select Bundle.\n\n(c) Marko Cupic 2024 <m.cupic@gmx.ch>\n@license MIT\nFor the full copyright and license information,\nplease view the LICENSE file that was distributed with this source code.\n@link https://github.com/markocupic/contao-article-class-select-bundle",
+    ])
+    ->withCache(sys_get_temp_dir().'/ecs/markocupic/contao-article-class-select-bundle')
+;
