@@ -45,13 +45,13 @@
                     <!-- indexer::stop -->
                     <div class="syndication">
                         {% if printButton|default %}
-                            <a href="{{ print }}" class="print" title="{{ printTitle }}" onclick="window.print();return false" data-skip-search-index>{{ backend_icon('assets/contao/images/print.svg') }}</a>
+                            <a href="{{ print }}" class="print" title="{{ printTitle }}" onclick="window.print();return false" data-skip-search-index><img src="{{ asset('assets/contao/images/print.svg') }}" width="16" height="16" alt=""></a>
                         {% endif %}
                         {% if facebookButton|default %}
-                            <a href="{{ path('contao_frontend_share', {p: 'facebook', u: encUrl}) }}" class="facebook" rel="nofollow" title="{{ facebookTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false">{{ backend_icon('assets/contao/images/facebook.svg') }}</a>
+                            <a href="{{ path('contao_frontend_share', {p: 'facebook', u: encUrl}) }}" class="facebook" rel="nofollow" title="{{ facebookTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false"><img src="{{ asset('assets/contao/images/facebook.svg') }}" width="16" height="16" alt=""></a>
                         {% endif %}
                         {% if twitterButton|default %}
-                            <a href="{{ path('contao_frontend_share', {p: 'twitter', u: encUrl, t: encTitle}) }}" class="twitter" rel="nofollow" title="{{ twitterTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false">{{ backend_icon('assets/contao/images/twitter.svg') }}</a>
+                            <a href="{{ path('contao_frontend_share', {p: 'twitter', u: encUrl, t: encTitle}) }}" class="twitter" rel="nofollow" title="{{ twitterTitle }}" onclick="var w=window.open(this.href,'','width=640,height=380,modal=yes,left=100,top=50,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no');w.opener=null;return false"><img src="{{ asset('assets/contao/images/twitter.svg') }}" width="16" height="16" alt=""></a>
                         {% endif %}
                     </div>
                     <!-- indexer::continue -->
