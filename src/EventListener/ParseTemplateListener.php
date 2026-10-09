@@ -27,9 +27,8 @@ class ParseTemplateListener
 
     private Adapter $stringUtil;
 
-    public function __construct(
-        private readonly ContaoFramework $framework,
-    ) {
+    public function __construct(private readonly ContaoFramework $framework)
+    {
         $this->stringUtil = $this->framework->getAdapter(StringUtil::class);
     }
 
